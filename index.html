@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login - Cine Film&Food">
+    <meta name="keywords" content="login, cine, restaurante, film&food">
+    <meta name="author" content="Film&Food">
+    <meta name="robots" content="index, follow">
+    <title>Login - Cine Film&Food</title>
+   
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../img/logo.png">
+    <script src="../js/check.js"></script>
+</head>
+<body style="background-image: url('../img/cinema.jpg'); background-size: cover; background-attachment: fixed; background-position: center;">
+
+    <!-- Header Mejorado con Semántica -->
+    <header class="header-simple" role="banner">
+        <div class="header-content">
+            <div class="brand-section">
+                <a href="index.html" class="brand-link" aria-label="Ir a la página principal">
+                    <h1 style="display: flex; align-items: center;">
+                        <img src="../img/logo.png" alt="Logo Cine Film&Food" style="width: 50px; height: auto; margin-right: 10px;">
+                        Cine Film&Food
+                    </h1>
+                </a>
+            </div>
+
+            <nav class="nav-simple" role="navigation" aria-label="Navegación principal">
+                <!-- Navegación Principal -->
+                <div class="nav-primary">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="index.html" class="btn-nav active" aria-current="page" aria-label="Página actual: Login">
+                                <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+                                <span>Login</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="registro.html" class="btn-nav" aria-label="Registrarse">
+                                <i class="fas fa-user-plus" aria-hidden="true"></i>
+                                <span>Registro</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Navegación Secundaria -->
+                <div class="nav-secondary">
+                    <ul class="nav-list-secondary">
+                        <li>
+                            <a href="admin_login.html" class="btn-nav-secondary" aria-label="Panel de administración">
+                                <i class="fas fa-cog" aria-hidden="true"></i>
+                                <span>Admin</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Mejorado -->
+    <main class="main-content" role="main">
+        <div class="container">
+
+            <!-- Mensaje de Bienvenida Personalizado -->
+            <section class="welcome-message" aria-labelledby="welcome-title">
+                    <div class="welcome-card">
+                    <div class="welcome-content">
+                        <h2 id="welcome-title">
+                            <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+                            ¡Bienvenido a Cine Film&Food!
+                        </h2>
+                        <p id="userGreeting">Inicia sesión para acceder a tu cuenta y disfrutar de la mejor experiencia cinematográfica</p>
+                        <div class="welcome-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-film" aria-hidden="true"></i>
+                                <span>Películas disponibles: <strong>Cargando...</strong></span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-utensils" aria-hidden="true"></i>
+                                <span>Platos deliciosos: <strong>Cargando...</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-decoration">
+                        <i class="fas fa-ticket-alt" aria-hidden="true"></i>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- Formulario de Login -->
+            <section class="quick-actions" aria-labelledby="login-title">
+                <h2 id="login-title" class="sr-only">Iniciar Sesión</h2>
+                <div class="actions-grid">
+                    <article class="action-card" role="region" aria-labelledby="login-card">
+                        <div class="action-icon">
+                            <i class="fas fa-user-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3 id="login-card">Iniciar Sesión</h3>
+                            <p>Accede a tu cuenta para reservar películas y disfrutar de nuestros servicios</p>
+                            <form id="formulario" action="#" method="post" style="margin-top: 1rem;">
+                                <div class="form-group" style="margin-bottom: 0.5rem;">
+                                    <label id="label" for="email">Correo Electrónico:</label>
+                                    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                                </div>
+
+                                <div class="form-group" style="margin-bottom: 1rem;">
+                                    <label id="label"  for="contra">Contraseña:</label>
+                                    <input type="password" id="contra" name="password" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                                </div>
+
+                                <div id="mensaje" style="margin-bottom: 1rem; color: var(--color-principal); text-align: center;"></div>
+
+                                <button type="submit" class="btn-ver-detalles primary" style="width: 100%;">
+                                    <span class="btn-text">Iniciar Sesión</span>
+                                    <span class="btn-loading" style="display:none">Cargando...</span>
+                                </button>
+                            </form>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Información y Soporte -->
+            <section class="info-support" aria-labelledby="support-title">
+                <h2 id="support-title" class="sr-only">Información y Soporte</h2>
+
+                <div class="support-grid">
+                    <aside class="support-card info-card" role="complementary" aria-labelledby="info-title">
+                        <h3 id="info-title">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                            Información
+                        </h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Horarios</strong>
+                                    <p>Lunes a Domingo: 12:00 - 23:00</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Ubicación</strong>
+                                    <p>Centro de Montevideo</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Contacto</strong>
+                                    <p>+598 1234 5678</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <aside class="support-card help-card" role="complementary" aria-labelledby="help-title">
+                        <h3 id="help-title">
+                            <i class="fas fa-question-circle" aria-hidden="true"></i>
+                            Centro de Ayuda
+                        </h3>
+                        <div class="help-list">
+                            <a href="#" class="help-link">
+                                <i class="fas fa-book" aria-hidden="true"></i>
+                                Guía de Uso
+                            </a>
+                            <a href="#" class="help-link">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                Contactar Soporte
+                            </a>
+                            <a href="#" class="help-link">
+                                <i class="fas fa-comments" aria-hidden="true"></i>
+                                Preguntas Frecuentes
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer Simple -->
+    <footer class="footer-simple">
+        <p>© 2025 Cine Film&Food</p>
+    </footer>
+
+    <script src="../js/logout.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>
